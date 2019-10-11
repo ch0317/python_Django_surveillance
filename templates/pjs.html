@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>P JS</title>
+    <script src="js/html-size-calculation.js"></script>
+    <link rel="stylesheet" href="css/pui.css" />
+    <script src="js/zepto.min.js"></script>
+<!--    <script src="js/touch.js"></script>-->
+    <script src="js/pui.js"></script>
+</head>
+
+<body class="header-fixed plr30 pb30">
+    <header class="header-bar bg-main">
+        <a href="index.html" class="header-left">
+            <i class="icon icon-pre"></i>
+            <span class="fz28">返回</span>
+        </a>
+        <h2 class="header-title">P JS</h2>
+    </header>
+    <section>
+        <h2 class="fz32 font-color-main fw-b ptb30">Dialog</h2>
+        <button class="btn bg-red w100" id="Alert">Alert</button>
+        <button class="btn bg-red w100 mt20" id="Alert01">Alert</button>
+        <button class="btn bg-second w100 mt20" id="Confirm">Confirm</button>
+        <button class="btn bg-blue w100 mt20" id="Dialog">自定义多按钮</button>
+    </section>
+    <section>
+        <h2 class="fz32 font-color-main fw-b pt30">Loader</h2>
+        <button class="btn bg-green w100 mt20" id="loaderBtn01">默认laoder加载</button>
+        <button class="btn bg-orange w100 mt20" id="loaderBtn02">定时自动关闭laoder加载</button>
+        <button class="btn bg-red w100 mt20" id="loaderBtn03">点击手动关闭laoder加载</button>
+    </section>
+    <section>
+        <h2 class="fz32 font-color-blue fw-b pt30">Action</h2>
+        <button class="btn bg-main w100 mt20" id="Action">action</button>
+    </section>
+    <section>
+        <h2 class="fz32 font-color-main fw-b ptb30">Toast</h2>
+        <button class="btn bg-orange w100" id="Toast01">手动隐藏</button>
+        <button class="btn bg-green w100 mt20" id="Toast02">自动隐藏</button>
+    </section>
+    <section>
+        <h2 class="fz32 font-color-main fw-b ptb30 mt20">Modal dialog</h2>
+        <button class="btn bg-blue w100" id="Modal">Modal</button>
+    </section>
+
+    <!--Modal dialog main begin-->
+    <div class="dialog-wrap" id="modalMain">
+        <div class="dialog-main">
+            <div class="dialog-title">完善资料</div>
+            <div class="dialog-content">
+                <input class="input-text" type="text" placeholder="请输入姓名">
+                <select class="select mt20">
+                    <option>请选择性别</option>
+                    <option>男</option>
+                    <option>女</option>
+                </select>
+            </div>
+            <div class="dialog-footer poo tx-c">
+                <div class="dialog-btn font-color-main p-f1 modal-hide">取消</div>
+                <div class="dialog-btn color-main p-f1" id="modalSub">提交</div>
+            </div>
+        </div>
+        <div class="dialog-mark"></div>
+    </div>
+    <!--Modal dialog main end-->
+    
+    
+    <section>
+        <h2 class="fz32 font-color-main fw-b ptb30">Cookie操作</h2>
+        <div>
+            <input class="input input-text" type="text" placeholder="请输入要设置Cookie" />
+            <button class="set btn bg-main mt20">设置cookie</button>
+            <button class="get btn bg-green mt20">获取cookie</button>
+            <button class="delete btn bg-orange mt20">删除cookie</button>
+        </div>
+    </section>
+    <section>
+        <h2 class="fz32 font-color-main fw-b ptb30">localStorage操作</h2>
+        <div>
+            <input class="inputls input-text" type="text" placeholder="请输入要设置的localStorage" />
+            <button class="setls btn bg-main mt20">设置localStorage</button>
+            <button class="getls btn bg-green mt20">获取localStorage</button>
+            <button class="deletels btn bg-orange mt20">删除localStorage</button>
+            <button class="clearls btn  bg-red mt20">清空localStorage</button>
+        </div>
+    </section>
+    <div class="dialog-wrap"></div>
+</body>
+<script>
+    //弹窗
+    $("#Alert").on("click", function () {
+        $p.alert({
+            title: "提示",
+            msg: "你确定要进行这个操作吗？",
+            buttons: ["是的"],
+            callback: function () {
+                alert("你选了 是的")
+            }
+        })
+    });
+    
+    $("#Alert01").on("click", function () {
+        $p.alert("你说什么？",function(){
+            alert(1)
+        })
+    });
+
+    //Confirm
+    $("#Confirm").on("click", function () {
+        $p.confirm({
+            title: "提示",
+            msg: "你确定要进行这个操作吗？",
+            buttons: ["取消", "是咯"],
+            callback: function () {
+                alert("你选了 是咯")
+            }
+        })
+    });
+
+    //Dialog 多按钮
+    $("#Dialog").on("click", function () {
+        $p.dialog({
+            title: "提示",
+            msg: "你确定要进行这个操作吗？",
+            buttons: [{
+                buttonsName: "关闭",
+                callback: function () {
+                    alert("你选了 关闭")
+                }
+				}, {
+                buttonsName: "按钮一",
+                callback: function () {
+                    alert("你选了 按钮一")
+                }
+				}, {
+                buttonsName: "按钮二",
+                callback: function () {
+                    alert("你选了 按钮二")
+                }
+				}]
+        })
+    });
+    $("#loaderBtn01").on("click", function () {
+        $p.loader();
+    });
+    $("#loaderBtn02").on("click", function () {
+        var t1 = new $p.loader({
+            loaderTxt: "自定义加载中...",
+            TxtColor: "red",
+            loaderStyle: "dot",
+            tapHide: false,
+            loaderColor: "red",
+            callback: function () {
+                setTimeout(function () {
+                    $p.loaderHide();
+                }, 3000)
+            },
+        });
+    });
+    $("#loaderBtn03").on("click", function () {
+        var t1 = new $p.loader({
+            loaderTxt: "再次点击隐藏",
+            loaderStyle: "dot",
+            tapHide: true,
+            callback:function(){
+                console.log(1)
+            }
+        });
+    });
+    //action
+    $("#Action").on("click", function () {
+        $p.action({
+            buttons: [{
+                buttonsName: "相机",
+                callback: function () {
+                    alert("你选了相机")
+                }
+				}, {
+                buttonsName: "照片库",
+                callback: function () {
+                    alert("你选了照片库")
+                }
+            }],
+            bgTapHide:true
+        })
+    });
+
+    /*Toast*/
+    //Toast 不自动隐藏
+    $("#Toast01").on("click", function () {
+        $p.toast({
+            duration: 0,
+            msg: "再次点击隐藏再次点击隐藏再次点击隐藏再次点击隐藏再次点击隐藏再次点击隐藏再次点击隐藏再次点击隐藏再次点击隐藏再次点击隐藏再次点击隐藏"
+        });
+        $("body").addClass("toast-show");
+        return false;
+    });
+
+    //Toast 手动隐藏
+    $(document).on("click", ".toast-show", function () {
+        //loader隐藏
+        $p.toastHide(function () {
+            console.log("手动隐藏了")
+        });
+        $("body").removeClass("toast-show");
+    });
+
+    //Toast 定时自动隐藏
+    $("#Toast02").on("click", function () {
+        $p.toast({
+            msg:"你说的是什么？",
+            callback:function(){
+                console.log("隐藏了")
+            }
+        });
+    })
+
+
+    /*Modal*/
+    $("#Modal").on("click", function () {
+        //Modal显示
+        $("#modalMain").modal("show");
+    });
+    $("#modalSub").on("click", function () {
+        //Modal隐藏 带回调
+        $("#modalMain").modal("hide", function () {
+            alert("手动隐藏了")
+        });
+    });
+</script>
+<script type="text/javascript">
+    //设置Cookie
+    $(".set").on("tap", function () {
+        var val = $(".input").val()
+        $p.setCookie("b", val, 1);
+        alert("已设置cookie值为:" + val + "")
+    });
+
+    //获取Cookie
+    $(".get").on("tap", function () {
+        alert($p.getCookie("b"))
+    });
+
+    //删除Cookie
+    $(".delete").on("tap", function () {
+        $p.deleteCookie("b")
+    });
+
+    /*localStorage*/
+    //设置localStorage
+    $(".setls").on("tap", function () {
+        var val = $(".inputls").val()
+        $p.setlocStorage("setlocStorageName", val)
+    });
+
+    //获取localStorage
+    $(".getls").on("tap", function () {
+        alert($p.getlocStorage("setlocStorageName"))
+    });
+
+    //删除localStorage
+    $(".deletels").on("tap", function () {
+        console.log($p.locStorageKey(1))
+        $p.deletelocStorage('setlocStorageName');
+    });
+
+    //清空localStorage
+    $(".clearls").on("tap", function () {
+        $p.clearlocStorage();
+    });
+</script>
+
+
+</html>

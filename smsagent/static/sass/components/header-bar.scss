@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/*头部主要样式*/
+
+.header-bar {
+    height: r(88);
+    line-height: r(88);
+    background: #F5F5F5;
+    border-bottom: #C6C6C6;
+    position: relative;
+    box-sizing: content-box;
+    z-index: 100;
+    color: $font-color-main;
+    >* {
+        position: absolute;
+        height: 100%;
+        bottom: 0;
+        z-index: 2;
+        height: r(88);
+        line-height: r(88);
+    }
+    &.immersed{
+        padding-top: 25px
+    }
+}
+
+.header-title {
+    width: 100%;
+    text-align: center;
+    left: 0;
+    z-index: 1;
+    font-size: r(36);
+}
+
+.header-left {
+    padding-left: r(30);
+    z-index: 2
+}
+
+.header-right {
+    padding-right: r(30);
+    right: 0;
+    z-index: 2
+}
+
+.header-fixed {
+    padding-top: r(88);
+    >.header-bar {
+        position: fixed!important;
+        top: 0;
+        width: 100%;
+        left: 0;
+        z-index: 1000
+    }
+}

@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*卡片*/
+.card{
+    box-shadow:0 r(3) r(3) rgba(0,0,0,.2);
+    background: #fff;
+    margin: r(30);
+    overflow: hidden;
+    border-radius: $round;
+}

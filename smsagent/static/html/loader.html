@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>PUI-LOADER</title>
+    <link rel="stylesheet" href="../css/pui.css" />
+    <script src="../js/html-size-calculation.js"></script>
+    <script src="../js/zepto.min.js"></script>
+</head>
+
+<body class="bgf5 header-fixed">
+    <header class="header-bar bg-main">
+        <a href="../index.html" class="header-left">
+            <i class="icon icon-pre"></i>
+            <span class="fz28">返回</span>
+        </a>
+        <h2 class="header-title">加载</h2>
+    </header>
+    <h3 class="fz26 p20">图标文字样式</h3>
+    <section class="bgff bt bb">
+            <div class="loader-main">
+                <div class="loader"><i></i><i></i><i></i></div>
+                <div class="fz24">加载中</div>
+            </div>
+            <div class="loader-main">
+                <div class="loader1"></div>
+                <div class="fz24">加载中</div>
+            </div>
+    </section>
+    <section class="tx-c p30 bgff bt bb mt20">
+        <button class="btn bg-main" onclick="$('.loader-wrap').show()">点击查看弹框</button>
+        <div class="loader-wrap" onclick="$(this).hide()">
+            <div class="loader-main">
+                <div class="loader"><i></i><i></i><i></i></div>
+                <div class="fz24">加载中</div>
+            </div>
+        </div>
+    </section>
+    <h3 class="fz26 p20">默认样式</h3>
+    <section class="bgff bt">
+        <div class="poo p-ac bb p20">
+            <div class="p-f1 fz32">主色/默认色</div>
+            <div class="loader"><i></i><i></i><i></i></div>
+        </div>
+
+        <div class="poo p-ac bb p20">
+            <div class="p-f1 fz32">副色</div>
+            <div class="loader loader-second"><i></i><i></i><i></i></div>
+        </div>
+        <div class="poo p-ac bb p20">
+            <div class="p-f1 fz32">红色</div>
+            <div class="loader loader-red"><i></i><i></i><i></i></div>
+        </div>
+        <div class="poo p-ac bb p20">
+            <div class="p-f1 fz32">绿色</div>
+            <div class="loader loader-green"><i></i><i></i><i></i></div>
+        </div>
+        <div class="poo p-ac bb p20">
+            <div class="p-f1 fz32">蓝色</div>
+            <div class="loader loader-blue"><i></i><i></i><i></i></div>
+        </div>
+        <div class="poo p-ac bb p20">
+            <div class="p-f1 fz32">橙色</div>
+            <div class="loader loader-orange"><i></i><i></i><i></i></div>
+        </div>
+    </section>
+
+    <h3 class="fz26 p20">样式二</h3>
+    <section class="bgff">
+        <div class="poo p-ac bb bt p20">
+            <div class="p-f1 fz32">主色/默认色</div>
+            <div class="loader1"></div>
+        </div>
+        <div class="poo p-ac bb p20">
+            <div class="p-f1 fz32">副色</div>
+            <div class="loader1 loader1-second"></div>
+        </div>
+        <div class="poo p-ac bb p20">
+            <div class="p-f1 fz32">红色</div>
+            <div class="loader1 loader1-red"></div>
+        </div>
+        <div class="poo p-ac bb p20">
+            <div class="p-f1 fz32">绿色</div>
+            <div class="loader1 loader1-green"></div>
+        </div>
+        <div class="poo p-ac bb p20">
+            <div class="p-f1 fz32">蓝色</div>
+            <div class="loader1 loader1-blue"></div>
+        </div>
+        <div class="poo p-ac bb p20">
+            <div class="p-f1 fz32">橙色</div>
+            <div class="loader1 loader1-orange"></div>
+        </div>
+
+
+    </section>
+
+</body>
+
+
+
+</html>

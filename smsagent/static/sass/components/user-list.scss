@@ -1,0 +1,16 @@
+@charset "UTF-8";
+//用户列表
+.user-photo{
+    width: r(164);
+    height: r(164);
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: $round;
+    display: block
+}
+.user-photo-s{
+    width:r(80);
+    height: r(80)
+}

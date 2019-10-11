@@ -1,0 +1,322 @@
+@charset "UTF-8";
+
+/*TabsNav主要样式*/
+
+.tabs-nav {
+    text-align: center;
+    border: 1px solid $border-color;
+    border-radius: $round;
+    overflow: hidden;
+    display: -webkit-box;
+    display: box !important;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+}
+
+.tabs-nav-li {
+    padding: r(22) r(15);
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    line-height: 1;
+    font-size: r(30);
+    border-right: 1px solid $border-color;
+    color: $font-color-main;
+    box-sizing: content-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &:last-child {
+        border: 0;
+    }
+    &.active {
+        background: $border-color;
+    }
+}
+
+//圆角
+.tabs-nav-round {
+    border-radius: r(100)
+}
+
+//主色
+.tabs-nav-main,
+.tabs-nav-main .tabs-nav-li {
+    border-color: $color-main;
+    color: $color-main;
+}
+
+.tabs-nav-main .tabs-nav-li.active {
+    @include bg-main;
+}
+
+//副色
+.tabs-nav-second,
+.tabs-nav-second .tabs-nav-li {
+    border-color: $color-second;
+    color: $color-second;
+}
+
+.tabs-nav-second .tabs-nav-li.active {
+    @include bg-second;
+}
+
+//红色
+.tabs-nav-red,
+.tabs-nav-red .tabs-nav-li {
+    border-color: $color-red;
+    color: $color-red;
+}
+
+.tabs-nav-red .tabs-nav-li.active {
+    @include bg-red;
+}
+
+//蓝色
+.tabs-nav-blue,
+.tabs-nav-blue .tabs-nav-li {
+    border-color: $color-blue;
+    color: $color-blue;
+}
+
+.tabs-nav-blue .tabs-nav-li.active {
+    @include bg-blue;
+}
+
+//绿色
+.tabs-nav-green,
+.tabs-nav-green .tabs-nav-li {
+    border-color: $color-green;
+    color: $color-green;
+}
+
+.tabs-nav-green .tabs-nav-li.active {
+    @include bg-green;
+}
+
+//橙色
+.tabs-nav-orange,
+.tabs-nav-orange .tabs-nav-li {
+    border-color: $color-orange;
+    color: $color-orange;
+}
+
+.tabs-nav-orange .tabs-nav-li.active {
+    @include bg-orange;
+}
+
+//下线条样式
+.tabs-nav-line {
+    text-align: center;
+    -webkit-box-shadow: inset 0 -1px 0 $border-color;
+    box-shadow: inset 0 -1px 0 $border-color;
+    overflow: hidden;
+    display: -webkit-box;
+    display: box !important;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+}
+
+.tabs-nav-line-li {
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    line-height: 1;
+    font-size: r(30);
+    color: $font-color-main;
+    box-sizing: content-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &:last-child {
+        border: 0;
+    }
+    p {
+        padding: r(22) r(15);
+    }
+    &.active {
+        color: $color-main;
+        >p.dib {
+            border-bottom: 2px solid $color-main;
+        }
+        >p {
+            border-bottom: 2px solid $color-main;
+        }
+    }
+}
+
+//副色
+.tabs-nav-line-second,
+.tabs-nav-line-second .tabs-nav-line-li {
+    border-color: $color-second;
+    &.active {
+        color: $color-second;
+        >p{
+            border-color: $color-second;
+        }
+    }
+}
+
+//红色
+.tabs-nav-line-red,
+.tabs-nav-line-red .tabs-nav-line-li {
+    border-color: $color-red;
+    &.active {
+        color: $color-red;
+        >p{
+            border-color: $color-red;
+        }
+    }
+}
+
+//蓝色
+.tabs-nav-line-blue,
+.tabs-nav-line-blue .tabs-nav-line-li {
+    border-color: $color-blue;
+    &.active {
+        color: $color-blue;
+        >p{
+            border-color: $color-blue;
+        }
+    }
+}
+
+//绿色
+.tabs-nav-line-green,
+.tabs-nav-line-green .tabs-nav-line-li {
+    border-color: $color-green;
+    &.active {
+        color: $color-green;
+        >p{
+            border-color: $color-green;
+        }
+    }
+}
+
+//橙色
+.tabs-nav-line-orange,
+.tabs-nav-line-orange .tabs-nav-line-li {
+    border-color: $color-orange;
+    &.active {
+        color: $color-orange;
+        >p{
+            border-color: $color-orange;
+        }
+    }
+}
+//超出带滑动
+.tabs-nav-slider {
+    overflow: hidden;
+    height: r(74);
+    line-height: r(74);
+    -webkit-box-shadow: inset 0 -1px 0 $border-color;
+    box-shadow: inset 0 -1px 0 $border-color;
+    font-size: r(30);
+}
+.tabs-nav-slider-wrap{
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    height: r(100);
+    >ul{
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        &:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        >li{
+            padding: 0 r(30);
+            display: inline-block;
+            color: $font-color-main;
+            height: r(74);
+            box-sizing: border-box;
+            a{
+                color: inherit
+            }
+            &.active{
+                color: $color-main;
+                border-bottom: 2px solid $color-main;
+            }
+        }
+    }
+}
+.tabs-nav-slider-second{
+    .tabs-nav-slider-wrap{
+        >ul{
+            >li{
+                &.active{
+                    color: $color-second;
+                    border-color: $color-second
+                }
+            }
+        }
+    }
+}
+.tabs-nav-slider-red{
+    .tabs-nav-slider-wrap{
+        >ul{
+            >li{
+                &.active{
+                    color: $color-red;
+                    border-color: $color-red
+                }
+            }
+        }
+    }
+}
+.tabs-nav-slider-orange{
+    .tabs-nav-slider-wrap{
+        >ul{
+            >li{
+                &.active{
+                    color: $color-orange;
+                    border-color: $color-orange
+                }
+            }
+        }
+    }
+}
+.tabs-nav-slider-blue{
+    .tabs-nav-slider-wrap{
+        >ul{
+            >li{
+                &.active{
+                    color: $color-blue;
+                    border-color: $color-blue
+                }
+            }
+        }
+    }
+}
+.tabs-nav-slider-green{
+    .tabs-nav-slider-wrap{
+        >ul{
+            >li{
+                &.active{
+                    color: $color-green;
+                    border-color: $color-green
+                }
+            }
+        }
+    }
+}

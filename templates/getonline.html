@@ -1,0 +1,43 @@
+{% load filters %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>无人小车沙盘视频监控</title>
+    <link rel="stylesheet" href="./static/css/pui.css" />
+    <script src="./static/js/html-size-calculation.js"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body class="header-fixed nav-fixed">
+    <header class="header-bar bg-main">
+    	<a href="/getlist" class="header-left">
+            <i class="icon icon-pre"></i>
+            <span class="fz28">返回</span>
+        </a>
+        <h2 class="header-title">无人小车沙盘视频监控</h2>
+    </header>
+
+
+    <section class="bgff">
+        <div class="poo">
+{% for athlete in datas %}
+            <div class="p-f1">
+        <a href="/getvideo?str={{athlete.fields.deviceSerial}}:{{athlete.fields.channelNo}}" class="img-wrap video">
+            <img src="{{athlete.fields.picUrl}}">
+            <p class="fz32 plr30" style="height: 30px; overflow: hidden; text-align: center;">{{athlete.fields.channelName}}</p>
+        </a>
+    </div> 
+{% if forloop.counter|mod:2 == 0 %}
+</div> 
+<div class="poo">
+{% endif %}
+
+{% endfor %}
+</div>
+    </section>
+</body>
+</html>

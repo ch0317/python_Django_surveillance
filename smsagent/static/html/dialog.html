@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>PUI-BUTTON</title>
+    <link rel="stylesheet" href="../css/pui.css" />
+    <script src="../js/html-size-calculation.js"></script>
+    <script src="../js/zepto.min.js"></script>
+</head>
+
+<body class="header-fixed">
+    <header class="header-bar bg-main">
+        <a href="../index.html" class="header-left">
+            <i class="icon icon-pre"></i>
+            <span class="fz28">返回</span>
+        </a>
+        <h2 class="header-title">弹框</h2>
+    </header>
+
+    <section class="tx-c pt30 plr30">
+        <button class="btn bg-main w100" onclick="$(this).next().addClass('dialog-show')">confirm</button>
+        <!--dialog begin-->
+        <div class="dialog-wrap">
+            <div class="dialog-main">
+                <div class="dialog-title">弹出提示</div>
+                <div class="dialog-content">您确定要执行此操作吗？</div>
+                <div class="dialog-footer poo">
+                    <div class="dialog-btn font-color-main p-f1" onclick="$(this).closest('.dialog-wrap').removeClass('dialog-show')">取消</div>
+                    <div class="dialog-btn color-main p-f1" onclick="$(this).closest('.dialog-wrap').removeClass('dialog-show')">确定</div>
+                </div>
+            </div>
+            <div class="dialog-mark"></div>
+        </div>
+        <!--dialog end-->
+    </section>
+    <section class="tx-c pt30 plr30">
+        <button class="btn bg-main w100 bg-second" onclick="$(this).next().addClass('dialog-show')">alert</button>
+        <!--dialog begin-->
+        <div class="dialog-wrap">
+            <div class="dialog-main">
+                <div class="dialog-title">弹出提示</div>
+                <div class="dialog-content">您的操作有误</div>
+                <div class="dialog-footer poo">
+                    <div class="dialog-btn color-main p-f1" onclick="$(this).closest('.dialog-wrap').removeClass('dialog-show')">确定</div>
+                </div>
+            </div>
+            <div class="dialog-mark"></div>
+        </div>
+        <!--dialog end-->
+    </section>
+
+    <section class="tx-c pt30 plr30">
+        <button class="btn bg-green w100" onclick="$(this).next().addClass('dialog-show')">带表单的</button>
+        <!--dialog begin-->
+        <div class="dialog-wrap">
+            <div class="dialog-main">
+                <div class="dialog-title">完善资料</div>
+                <div class="dialog-content">
+                    <input class="input-text" type="text" placeholder="请输入姓名">
+                    <select class="select mt20">
+                        <option>请选择性别</option>
+                        <option>男</option>
+                        <option>女</option>
+                    </select>
+                </div>
+                <div class="dialog-footer poo">
+                    <div class="dialog-btn font-color-main p-f1" onclick="$(this).closest('.dialog-wrap').removeClass('dialog-show')">取消</div>
+                    <div class="dialog-btn color-main p-f1" onclick="$(this).closest('.dialog-wrap').removeClass('dialog-show')">提交</div>
+                </div>
+            </div>
+            <div class="dialog-mark"></div>
+        </div>
+        <!--dialog end-->
+    </section>
+
+    <section class="tx-c pt30 plr30">
+        <button class="btn bg-blue w100" onclick="$(this).next().addClass('dialog-show')">action</button>
+        <!--dialog begin-->
+        <div class="dialog-wrap">
+            <div class="action-main">
+                <div class="action-content">
+                    <button>选项一</button>
+                    <button>选项二</button>
+                    <button>选项三</button>
+                </div>
+                <button class="action-cancel"  onclick="$(this).closest('.dialog-wrap').removeClass('dialog-show')">取消</button>
+            </div>
+            <div class="dialog-mark"></div>
+        </div>
+        <!--dialog end-->
+    </section>
+    
+    <section class="tx-c pt30 plr30">
+        <button class="btn bg-red w100" onclick="$('.loader-wrap').addClass('loader-show')">loading</button>
+        <div class="loader-wrap" onclick="$(this).removeClass('loader-show')">
+            <div class="loader-main">
+                <div class="loader"><i></i><i></i><i></i></div>
+                <div class="fz24">加载中</div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+
+</html>

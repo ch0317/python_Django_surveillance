@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/*搜索主要样式*/
+
+.search{
+    padding: r(12) r(30);
+    position: relative;
+    border-bottom: 1px solid $border-color;
+    >input{
+        position: relative;
+        z-index: 1;
+        padding: r(10) r(30) r(10) r(50);
+    }
+    >p{
+        display: none
+    }
+}
+.search-placeholder{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    z-index: 2;
+    text-align: center;
+    -webkit-transform: translateY(-54%);
+    transform: translateY(-54%);
+    padding: 0 r(42);
+}
+.search.search-focus{
+    .search-placeholder{
+        text-align: left;
+        right: auto;
+        padding-right: 0;
+        >span{
+            display: none
+        }
+    }
+    >p{
+        display: block
+    }
+}

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/*slider 主要样式*/
+
+.yui-slider {
+    position: relative;
+    overflow: hidden
+}
+
+.yui-slider-nav {
+    position: absolute;
+    z-index: 2;
+    bottom: r(10);
+    width: 100%;
+    text-align: center;
+    >i{
+        display: inline-block;
+        width: r(15);
+        height: r(15);
+        background: #fff;
+        border-radius: r(15);
+        margin: 0 r(5);
+        &.active{
+            background-color: $color-main;
+        }
+    }
+}
+.yui-slider-content{
+    position: relative;
+    z-index: 1;
+    img{
+        width: 100%;
+        height: auto
+    }
+}
+.yui-slider-content:after {
+    content: "";
+    display: block;
+    clear: both;
+}

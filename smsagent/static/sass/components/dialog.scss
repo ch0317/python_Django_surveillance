@@ -1,0 +1,291 @@
+@charset "UTF-8";
+/*弹出框主要样式*/
+.dialog-wrap {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    pointer-events:none;
+    opacity: 0;
+    transition: .5s;
+    &.dialog-show { 
+        pointer-events: auto;
+        opacity: 1;
+        z-index: 1000;
+        .dialog-main {
+            animation: dialogAnimation 0.5s ease forwards;
+            -webkit-animation: dialogAnimation 0.5s ease forwards;
+            pointer-events:all
+        }
+        .action-main {
+            animation: actionAnimation 0.2s ease forwards;
+            -webkit-animation: actionAnimation 0.2s ease forwards;
+//            -webkit-animation: actionAnimation 0.2s ease forwards;
+        }
+    }
+    &:after{
+        content: "";
+        background: rgba(0, 0, 0, .6);
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    >.dialog-mark{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        cursor: pointer
+    }
+}
+@keyframes dialogAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        -webkit-transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+    40% {
+        transform: translate(-50%, -50%) scale(1.1);
+        -webkit-transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes dialogAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        -webkit-transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+    40% {
+        transform: translate(-50%, -50%) scale(1.1);
+        -webkit-transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes cancelDialogAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    40% {
+        transform: translate(-50%, -50%) scale(1.1);
+        -webkit-transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.5);
+        -webkit-transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes cancelDialogAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    40% {
+        transform: translate(-50%, -50%) scale(1.1);
+        -webkit-transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.5);
+        -webkit-transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+}
+
+.dialog-main {
+    position: absolute;
+    width: r(560);
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    border-radius: $round;
+    z-index: 3;
+    transform:translate(-50%, -50%) scale(.5);
+    animation: cancelDialogAnimation 0.5s ease forwards;
+}
+.dialog-title {
+    text-align: center;
+    padding-top: r(30);
+    color: $font-color-main;
+    font-size: r(36);
+}
+.dialog-content {
+    font-size: r(30);
+    padding: r(30);
+    line-height: 1.4em;
+}
+.dialog-footer {
+    border-top: 1px solid $border-color;
+    >* {
+        padding: r(20);
+        font-size: r(30);
+        border-right: 1px solid $border-color;
+        &:last-child {
+            border: none;
+        }
+    }
+}
+.action-main {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    bottom: 0;
+    padding: r(20) r(30);
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    opacity: 0;
+    animation: cancelActionAnimation 0.2s ease-in;
+    -webkit-animation: cancelActionAnimation 0.2s ease-in;
+    button {
+        width: 100%;
+        height: r(88);
+        border-bottom: 1px solid $border-color;
+        background: #fff;
+        font-size: r(30);
+        &:last-child {
+            border: none;
+        }
+    }
+    .action-cancel {
+        margin-top: r(20);
+        border-radius: $round;
+        @include bg-main;
+    }
+}
+.action-content {
+    border-radius: $round;
+    overflow: hidden;
+}
+@keyframes actionAnimation {
+    0% {
+        -webkit-transform: translate(0, 100%);
+        transform: translate(0, 100%);
+        -webkit-transition: 0.3s all;
+        transition: 0.3s all;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes actionAnimation {
+    0% {
+        -webkit-transform: translate(0, 100%);
+        transform: translate(0, 100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes cancelActionAnimation {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        
+        
+         -webkit-transform: translate(0, 100%);
+        transform: translate(0, 100%);
+        opacity: 0;
+    }
+}
+@keyframes cancelActionAnimation {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        
+        
+         -webkit-transform: translate(0, 100%);
+        transform: translate(0, 100%);
+        opacity: 0;
+    }
+}
+
+//toast
+.toast-wrap{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+//    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+    z-index: 1000;
+    >.toast-main{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, 0);
+        animation: cancelToastAnimation 0.2s ease-in;
+        font-size: r(26);
+        padding:r(10);
+        transition: 1s;
+        width: 100%;
+    }
+    &.toast-show{
+        
+        pointer-events: inherit;
+        >.toast-main{
+            animation: toastAnimation 0.2s ease forwards;
+        }
+    }
+}
+
+@keyframes toastAnimation {
+    0% {
+        transform: translate(0, 100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+@keyframes cancelToastAnimation {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 100%);
+        opacity: 0;
+    }
+}

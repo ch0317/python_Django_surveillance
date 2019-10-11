@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>无人小车沙盘视频监控</title>
+    <link rel="stylesheet" href="./static/css/pui.css" />
+    <script src="./static/js/html-size-calculation.js"></script>
+
+</head>
+
+<body class="header-fixed nav-fixed">
+    <header class="header-bar bg-main">
+        <h2 class="header-title">无人小车沙盘视频监控</h2>
+    </header>
+<section>
+        <ul class="list">
+        	{% for datalist in datas.data %}
+            <li>
+                <a href="./getonline?deviceid={{datalist.deviceSerial}}" class="poo p-ac">
+                    <h3 class="p-f1 list-title">{{datalist.deviceName}}</h3>
+                    <i class="icon icon-next"></i>
+                </a>
+            </li>    
+          {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>

@@ -1,0 +1,319 @@
+@charset "UTF-8";
+
+/*表单主要样式*/
+
+//文本框
+.input-text {
+    -webkit-appearance: none;
+    width: 100%;
+    font-size: r(28);
+    padding: 0.75em;
+    border-radius: $round;
+    box-sizing: border-box;
+    border: 1px solid $border-color;
+    color: $font-color-main;
+    vertical-align: middle;
+    outline: none;
+}
+
+//下拉框
+.select {
+    -webkit-appearance: none;
+    width: 100%;
+    font-size: r(28);
+    padding: 0.75em;
+    padding-right: r(60);
+    border-radius: $round;
+    box-sizing: border-box;
+    border: 1px solid $border-color;
+    color: $font-color-main;
+    vertical-align: middle;
+    background: url(../images/icon-select-down.svg) no-repeat right r(20) center;
+    background-size: r(40);
+    outline: none;
+}
+
+.select-next {
+    background-image: url(../images/icon-select-next.svg);
+    background-size: auto r(36);
+    background-position: right center;
+    padding-right: r(40);
+    border: none;
+    text-align: right
+}
+
+.input-checkbox {
+    display: inline-block;
+    width: r(32);
+    height: r(32);
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    position: relative;
+    background: none;
+    transition: 0.3s all;
+    border-radius: 0;
+    border: 1px solid #B1B1B1;
+    box-sizing: border-box;
+    line-height: 1;
+    text-align: center;
+    &:after{
+        content: "\e633";
+        font-family: "iconfont";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: r(30);
+        line-height: r(32);
+        color: #fff;
+        opacity: 0
+    }
+    &:checked{
+        border-color: $color-main;
+        background-color: $color-main;
+        &:after{
+            opacity: 1
+        }
+    }
+}
+
+//单选
+//.input-radio {
+//    display: inline-block;
+//    width: r(32);
+//    height: r(32);
+//    position: relative;
+//    overflow: hidden;
+//    vertical-align: middle;
+//    >span {
+//        border: 1px solid #B1B1B1;
+//        position: absolute;
+//        width: 100%;
+//        height: 100%;
+//        top: 0;
+//        left: 0;
+//        z-index: 1;
+//        box-sizing: border-box;
+//        border-radius: r(40);
+//        transition: 0.2s all
+//    }
+//    input {
+//        -webkit-appearance: none;
+//        position: relative;
+//        background: none;
+//        display: block;
+//        z-index: 2;
+//        width: r(20);
+//        height: r(20);
+//        margin: r(6);
+//        transition: 0.3s all;
+//        border-radius: r(20);
+//        &:checked {
+//            background: $color-main;
+//        }
+//        &:checked + span {
+//            border-color: $color-main
+//        }
+//    }
+//}
+
+.input-radio {
+    display: inline-block;
+    width: r(32);
+    height: r(32);
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    border: 1px solid #B1B1B1;
+    box-sizing: border-box;
+    border-radius: r(40);
+    transition: 0.2s all;
+    -webkit-appearance: none;
+    background: none;
+    &:after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: r(20);
+        height: r(20);
+        transform: translate(-50%,-50%);
+        transform: -webkit-translate(-50%,-50%);
+        transition: 0.3s all;
+        border-radius: r(20);
+        background: $color-main;
+        opacity: 0;
+    }
+    &:checked{
+        border-color: $color-main;
+        &:after{
+            opacity: 1
+        }
+    }
+    >span {
+        
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        
+    }
+    input {
+        
+        position: relative;
+        
+        display: block;
+        z-index: 2;
+        &:checked {
+            background: $color-main;
+        }
+        &:checked + span {
+            border-color: $color-main
+        }
+    }
+}
+
+//开关
+//.switch {
+//    display: inline-block;
+//    width: r(100);
+//    height: r(62);
+//    box-sizing: border-box;
+//    position: relative;
+//    vertical-align: middle;
+//    >span {
+//        position: absolute;
+//        width: 100%;
+//        height: 100%;
+//        box-sizing: border-box;
+//        top: 0;
+//        left: 0;
+//        z-index: 1;
+//        border-radius: r(100);
+//        border: r(3) solid #e4e4e4;
+//        transition: 0.3s all;
+//        background: #fff;
+//    }
+//    input {
+//        -webkit-appearance: none;
+//        position: absolute;
+//        z-index: 2;
+//        left: r(2);
+//        top: r(2);
+//        right: auto;
+//        width: r(58);
+//        height: r(58);
+//        background: #fafafa;
+//        box-shadow: 0 r(2) r(6) rgba(0, 0, 0, .3);
+//        border-radius: r(60);
+//        transition: 0.3s all;
+//        &:checked {
+//            left: r(40);
+//            transition: 0.3s all;
+//            & + span {
+//                background: $color-main;
+//                border-color: $color-main
+//            }
+//        }
+//    }
+//}
+
+.switch {
+    display: inline-block;
+    width: r(100);
+    height: r(62);
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: middle;
+    border-radius: r(100);
+    border: r(3) solid #e4e4e4;
+    transition: 0.3s all;
+    background: #fff;
+    -webkit-appearance: none;
+    &:after{
+        content: "";
+        position: absolute;
+        z-index: 2;
+        left: r(0);
+        top: r(0);
+        right: auto;
+        width: r(58);
+        height: r(58);
+        background: #fafafa;
+        box-shadow: 0 r(2) r(6) rgba(0, 0, 0, .3);
+        border-radius: r(60);
+        transition: 0.3s all;
+    }
+    &:checked {
+        background: $color-main;
+        border-color: $color-main;
+        &:after{
+            left: r(38)
+        }
+        &.switch-red{
+            background-color: $color-red;
+            border-color: $color-red
+        }
+        &.switch-orange{
+            background-color: $color-orange;
+            border-color: $color-orange
+        }
+        &.switch-blue{
+            background-color: $color-blue;
+            border-color: $color-blue
+        }
+        &.switch-green{
+            background-color: $color-green;
+            border-color: $color-green
+        }
+        &.switch-second{
+            background-color: $color-second;
+            border-color: $color-second
+        }
+    }
+}
+
+
+//滑块
+.input-range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: r(12);
+    background: #E0E0E0;
+    border-radius: $round;
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: r(40);
+        height: r(40);
+        background: $color-main;
+        border-radius: $round;
+    }
+    &.input-range-second::-webkit-slider-thumb {
+        background-color: $color-second;
+    }
+    &.input-range-red::-webkit-slider-thumb {
+        background-color: $color-red;
+    }
+    &.input-range-blue::-webkit-slider-thumb {
+        background-color: $color-blue;
+    }
+    &.input-range-green::-webkit-slider-thumb {
+        background-color: $color-green;
+    }
+    &.input-range-orange::-webkit-slider-thumb {
+        background-color: $color-orange;
+    }
+    &.input-range-round {
+        border-radius: r(1000);
+        &::-webkit-slider-thumb{
+            border-radius: r(1000);
+        }
+    }
+}
+

@@ -1,0 +1,143 @@
+@charset "UTF-8";
+//栅格系统
+
+//元素采用弹性BOX布局
+.poo {
+    display: -webkit-box;
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+//子元素占用区域份数
+.p-f1 {
+    position: relative;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.p-f2 {
+    position: relative;
+    -webkit-box-flex: 2;
+    box-flex: 2;
+    -webkit-flex: 2;
+    flex: 2;
+}
+
+.p-f3 {
+    position: relative;
+    -webkit-box-flex: 3;
+    box-flex: 3;
+    -webkit-flex: 3;
+    flex: 3;
+}
+
+.p-f4 {
+    position: relative;
+    -webkit-box-flex: 4;
+    box-flex: 4;
+    -webkit-flex: 4;
+    flex: 4;
+}
+
+//占父盒子的二分之一
+.p-1f2 {
+    -webkit-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+//占父盒子的三分之一
+.p-1f3 {
+    -webkit-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex: 0 0 33.333%;
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+}
+
+//占父盒子的四分之一
+.p-1f4 {
+    -webkit-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+//============对齐方式==============
+//---子元素水平对齐----
+//居中对齐
+.p-pc {
+    -webkit-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+//结尾对齐
+.p-pe {
+    -webkit-box-pack: end;
+    box-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+//两端对齐
+.p-pj {
+    -webkit-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+//---子元素垂直对齐----
+//子元素垂直居中
+.p-ac {
+    -webkit-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+//子元素垂直结尾对齐
+.p-ae {
+    -webkit-box-align: end;
+    box-align: end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+//子元素水平垂直居中
+.p-pac {
+    -webkit-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+//=============================
+//子元素竖向排列
+.p-ver {
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+//子元素折行
+.p-bm {
+    /*box-lines出现无法使用的情况*/
+    -webkit-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}

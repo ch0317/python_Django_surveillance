@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/*进度条主要样式*/
+//默认按钮
+.progress{
+    background: #ededed;
+    position: relative;
+    height: r(24);
+    border-radius: $round;
+    overflow: hidden;
+    >span{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: $color-main;
+        border-radius: $round;
+    }
+}
+.progress-second>span{
+    background-color: $color-second
+}
+.progress-red>span{
+    background-color: $color-red
+}
+.progress-blue>span{
+    background-color: $color-blue
+}
+.progress-green>span{
+    background-color: $color-green
+}
+
+.progress-orange>span{
+    background-color: $color-orange
+}
+
+.progress-round{
+    border-radius: r(1000);
+    >span{
+        border-radius: r(1000);
+    }
+}

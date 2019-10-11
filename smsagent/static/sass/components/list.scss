@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*列表主要样式*/
+.list{
+    background: #fff;
+    border-top: 1px solid $border-color;
+    >li{
+        padding: r(20) r(30);
+        min-height: r(86);
+        line-height: 1.2em;
+        border-bottom: 1px solid $border-color;
+        overflow: hidden
+    }
+}
+.list-title{
+    color: $font-color-main;
+    vertical-align: middle;
+    font-size: r(32)
+}
+.list-img{
+    width: r(164);
+    height: r(164);
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

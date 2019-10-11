@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/*按钮主要样式*/
+//默认按钮
+.btn{
+    -webkit-appearance:none;
+	outline:none;
+    display: inline-block;
+    padding:0.75em 1.5em;
+    text-align: center;
+    border: 0;
+    font-size: r(32);
+    border-radius: $round;
+    background: #E0E0E0;
+    color: $font-color-main;
+    line-height: 1
+}
+
+//失效
+.btn-disable{
+    background: #E0E0E0;
+    color: #BBBBBB
+}
+
+//---------按钮大小----------
+//按钮小
+.btn-s{
+    font-size: r(24);
+}
+//按钮中
+.btn-m{
+    font-size: r(28);
+}
+//按钮大
+.btn-b{
+    font-size: r(36);
+}
+
+//--------镂空按钮-----------
+//默认镂空按钮
+.btn-bd{
+    border:1px solid $border-color;
+    color: $font-color-main;
+    background:none;
+}
+//默认主色按钮
+.btn-bd-main{
+    border: 1px solid $color-main;
+    color: $color-main;
+    background: none
+}
+.btn-bd-second{
+    border: 1px solid $color-second;
+    color: $color-second;
+    background: none;
+}
+.btn-bd-red{
+    border: 1px solid $color-red;
+    color: $color-red;
+    background: none;
+}
+.btn-bd-blue{
+    border: 1px solid $color-blue;
+    color: $color-blue;
+    background: none;
+}
+.btn-bd-green{
+    border: 1px solid $color-green;
+    color: $color-green;
+    background: none;
+}
+.btn-bd-orange{
+    border: 1px solid $color-orange;
+    color: $color-orange;
+    background: none;
+}
+
+

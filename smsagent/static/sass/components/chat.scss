@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/*聊天*/
+.chat-content-left{
+    position: relative;
+    >i{
+        position: absolute;
+        width:0;
+        height: 0;
+        border-top: r(16) solid transparent;
+        border-right: r(16) solid #fff;
+        border-bottom: r(16) solid transparent;
+        left: - r(14);
+        top: r(16)
+    }
+    img{
+        max-width: r(300)
+    }
+}
+.chat-content-right{
+    position: relative;
+    >div{
+        @include bg-main;
+    }
+    >i{
+        position: absolute;
+        width:0;
+        height: 0;
+        border-top: r(16) solid transparent;
+        border-left: r(16) solid $color-main;
+        border-bottom: r(16) solid transparent;
+        right: - r(14);
+        top: r(16)
+    }
+    img{
+        max-width: r(300)
+    }
+}
+.chat-text{
+    padding-top: r(10);
+    padding-bottom: r(10);
+}
+.chat-fixed{
+    padding-bottom: r(88);
+    .chat-toolbar{
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        z-index: 1000
+    }
+}

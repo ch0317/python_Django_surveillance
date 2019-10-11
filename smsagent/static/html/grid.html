@@ -1,0 +1,165 @@
+s<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>PUI-BUTTON</title>
+    <link rel="stylesheet" href="../css/pui.css" />
+    <script src="../js/html-size-calculation.js"></script>
+    <style>
+        .grid {
+            text-align: center;
+        }
+        .grid>.poo {
+            background: #fff;
+            text-align: center;
+            margin: 4px;
+            border: 1px solid #FFB9B9;
+            color: #313131;
+            padding: 4px;
+            margin-bottom: 10px
+        }
+        .grid>.poo>div {
+            background: #E6E6E6;
+            padding: 5px;
+            border: 1px dashed #a0a0a0
+        }
+    </style>
+</head>
+
+<body class="header-fixed">
+    <header class="header-bar bg-main">
+        <a href="../index.html" class="header-left">
+            <i class="icon icon-pre"></i>
+            <span class="fz28">返回</span>
+        </a>
+        <h2 class="header-title">栅格</h2>
+    </header>
+    <section class="grid p30 fz28">
+        <h3 class="h3 tx-l mb20">等分</h3>
+        <div class="poo">
+            <div class="p-f1">1/2</div>
+            <div class="p-f1">1/2</div>
+        </div>
+        <div class="poo">
+            <div class="p-f1">1/3</div>
+            <div class="p-f1">1/3</div>
+            <div class="p-f1">1/3</div>
+        </div>
+        <div class="poo">
+            <div class="p-f1">1/4</div>
+            <div class="p-f1">1/4</div>
+            <div class="p-f1">1/4</div>
+            <div class="p-f1">1/4</div>
+        </div>
+        <div class="poo">
+            <div class="p-f1">1/5</div>
+            <div class="p-f1">1/5</div>
+            <div class="p-f1">1/5</div>
+            <div class="p-f1">1/5</div>
+            <div class="p-f1">1/5</div>
+        </div>
+
+        <h3 class="h3 tx-l mt30 mb20">按照比例</h3>
+        <div class="poo">
+            <div class="p-f2">2</div>
+            <div class="p-f1">1</div>
+        </div>
+        <div class="poo">
+            <div class="p-f3">3</div>
+            <div class="p-f1">1</div>
+        </div>
+        <div class="poo">
+            <div class="p-f4">4</div>
+            <div class="p-f1">1</div>
+        </div>
+        <div class="poo">
+            <div class="p-f4">4</div>
+            <div class="p-f2">2</div>
+        </div>
+        <div class="poo">
+            <div class="p-f4">4</div>
+            <div class="p-f3">3</div>
+        </div>
+        <div class="poo">
+            <div class="p-f4">4</div>
+            <div class="p-f3">3</div>
+            <div class="p-f3">3</div>
+        </div>
+
+        <h3 class="h3 tx-l mt30 mb20">固定部分比例</h3>
+        <div class="poo">
+            <div class="p-1f2">50%</div>
+            <div class="p-f1">等分</div>
+            <div class="p-f1">等分</div>
+            <div class="p-f1">等分</div>
+        </div>
+        <div class="poo">
+            <div class="p-1f3">33%</div>
+            <div class="p-1f4">25%</div>
+            <div class="p-f1">等分</div>
+            <div class="p-f1">等分</div>
+        </div>
+        
+        <h3 class="h2 tx-l mt30 ">对齐方式</h3>
+        <h4 class="h4 tx-l">水平左对齐：</h4>
+        <div class="poo">
+            <div class="p-1f3">33%</div>
+            <div class="p-1f4">25%</div>
+        </div>
+        <h4 class="h4 tx-l">水平居中：</h4>
+        <div class="poo p-pc">
+            <div class="p-1f3">33%</div>
+            <div class="p-1f4">25%</div>
+        </div>
+        <h4 class="h4 tx-l">水平右对齐：</h4>
+        <div class="poo p-pe">
+            <div class="p-1f3">33%</div>
+            <div class="p-1f4">25%</div>
+        </div>
+        <h4 class="h4 tx-l">两端对齐：</h4>
+        <div class="poo p-pj">
+            <div class="p-1f3">33%</div>
+            <div class="p-1f4">25%</div>
+        </div>
+        <h4 class="h4 tx-l">垂直居中：</h4>
+        <div class="poo p-ac" style="height:6em">
+            <div class="p-1f3">33%</div>
+            <div class="p-1f4">25%</div>
+        </div>
+        <h4 class="h4 tx-l">垂直底部对齐：</h4>
+        <div class="poo p-ae" style="height:6em">
+            <div class="p-1f3">33%</div>
+            <div class="p-1f4">25%</div>
+        </div>
+        <h4 class="h4 tx-l">水平垂直居中：</h4>
+        <div class="poo p-pac" style="height:6em">
+            <div class="p-1f3">33%</div>
+            <div class="p-1f4">25%</div>
+        </div>
+        <h4 class="h4 tx-l">右下对齐：</h4>
+        <div class="poo p-pe p-ae" style="height:6em">
+            <div class="p-1f3">33%</div>
+            <div class="p-1f4">25%</div>
+        </div>
+        
+        <h3 class="h2 tx-l mt30 ">溢出折行</h3>
+        <div class="poo p-bm">
+            <div class="p-1f3" style="width:6em">33%</div>
+            <div class="p-1f3" style="width:6em">33%</div>
+            <div class="p-1f3" style="width:6em">33%</div>
+            <div class="p-1f3" style="width:6em">33%</div>
+            <div class="p-1f3" style="width:6em">33%</div>
+        </div>
+        
+        <h3 class="h2 tx-l mt30">竖向排列</h3>
+        <div class="poo p-pac p-ver">
+            <div class="p-1f3">33%</div>
+            <div class="p-1f4">25%</div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+.color-main {
+  color: #3a3a3a !important; }
+
+.color-second {
+  color: #FF7D21 !important; }
+
+.color-red {
+  color: red !important; }
+
+.color-blue {
+  color: #4395FF !important; }
+
+.color-green {
+  color: #55CC55 !important; }
+
+.color-orange {
+  color: orange !important; }
+
+.font-color-main {
+  color: #4b4b4b !important; }
+
+.font-color-second {
+  color: #999999 !important; }
+
+.bg-main {
+  background: #3a3a3a !important;
+  color: #fff !important; }
+  .bg-main a {
+    color: #fff; }
+
+.bg-second {
+  background: #FF7D21 !important;
+  color: #fff !important; }
+  .bg-second a {
+    color: #fff; }
+
+.bg-red {
+  background: red !important;
+  color: #fff !important; }
+  .bg-red a {
+    color: #fff; }
+
+.bg-blue {
+  background: #4395FF !important;
+  color: #fff !important; }
+  .bg-blue a {
+    color: #fff; }
+
+.bg-green {
+  background: #55CC55 !important;
+  color: #fff !important; }
+  .bg-green a {
+    color: #fff; }
+
+.bg-orange {
+  background: orange !important;
+  color: #fff !important; }
+  .bg-orange a {
+    color: #fff; }
+
+.main-round {
+  border-radius: 0.16rem; }
+
+/*# sourceMappingURL=config.css.map */

@@ -1,0 +1,138 @@
+@charset "UTF-8";
+//--UI效果图比例变量---
+$r:1/16/(750/320);
+
+//px转rem函数
+@function r($px) {
+  @return $px * $r + rem;
+}
+//==========按钮圆角=================
+$round:r(6);
+//==========色调=================
+
+$color-main:#3a3a3a;        //主色
+$color-second:#FF7D21;      //次色
+$border-color:#e5e5e5 ;      //边框颜色
+$font-color-main:#4b4b4b;   //文字主色
+$font-color-second:#999999; //文字色
+//常用色彩
+$color-red:red;             //红色
+$color-blue:#4395FF;        //蓝色
+$color-green:#55CC55;       //绿色
+$color-orange:orange;       //橙色
+//主色
+.color-main{
+    color: $color-main !important;
+}
+//副色
+.color-second{
+    color: $color-second !important;
+}
+//常用色
+.color-red{
+    color: $color-red !important;
+}
+.color-blue{
+    color: $color-blue !important;
+}
+.color-green{
+    color: $color-green !important;
+}
+.color-orange{
+    color: $color-orange !important;
+}
+//----------文字 begin-----------
+.font-color-main{
+    color: $font-color-main !important;
+}
+.font-color-second{
+    color: $font-color-second !important;
+}
+//----------文字 end-------------
+
+//----------背景 begin-----------
+//主背景
+@mixin bg-main{
+    background: $color-main !important;
+    color: #fff!important;
+    a{
+        color: #fff
+    }
+}
+
+//副背景
+@mixin bg-second{
+    background: $color-second !important;
+    color: #fff!important;
+    a{
+        color: #fff
+    }
+}
+
+//常用背景
+@mixin bg-red{
+    background: $color-red !important;
+    color: #fff!important;
+    a{
+        color: #fff
+    }
+}
+
+@mixin bg-blue{
+    background: $color-blue !important;
+    color: #fff!important;
+    a{
+        color: #fff
+    }
+}
+
+@mixin bg-green{
+    background: $color-green !important;
+    color: #fff!important;
+    a{
+        color: #fff
+    }
+}
+
+@mixin bg-orange{
+    background: $color-orange !important;
+    color: #fff!important;
+    a{
+        color: #fff
+    }
+}
+
+
+
+//主背景
+.bg-main{
+    @include bg-main;
+}
+//副背景
+.bg-second{
+    @include bg-second;
+}
+//常用背景
+.bg-red{
+    @include bg-red;
+}
+.bg-blue{
+    @include bg-blue;
+}
+.bg-green{
+    @include bg-green;
+}
+.bg-orange{
+    @include bg-orange;
+}
+//----------背景 end------------
+
+//主要圆角
+.main-round{
+    border-radius: $round;
+}
+
+
+
+
+

@@ -1,0 +1,609 @@
+@charset "UTF-8";
+//===========-常见样式-===========
+.db {
+    display: block!important;
+}
+
+.di {
+    display: inline!important;
+}
+
+.dib {
+    display: inline-block!important;
+}
+
+.hr {
+    margin: 0;
+    border: none;
+    height: 1px;
+    overflow: hidden;
+    background-color: $border-color;
+}
+.w100{
+    width: 100%
+}
+.w-full{
+    width: 100%
+}
+//垂直居中
+.di-vm {
+    display: inline-block;
+    vertical-align: middle;
+}
+//-------边框 begin--------
+.bn{
+    border: none!important;
+}
+.bd{
+    border: 1px solid $border-color;
+}
+.bt {
+    border-top: 1px solid $border-color;
+}
+
+.br {
+    border-right: 1px solid $border-color;
+}
+
+.bb {
+    border-bottom: 1px solid $border-color;
+}
+
+.bl {
+    border-left: 1px solid $border-color;
+}
+.hairlines{
+    .bt,.bd,.br,.bb{
+         border-width: .5px!important;
+    }
+}
+//-------边框 end--------
+
+//-------浮动 begin-------
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.fn{
+    float: none
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+//-------浮动 end--------
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+//-------常见字号 begin-------
+.fz0 {
+    font-size: 0;
+    overflow: hidden;
+}
+.fz20 {
+    font-size: r(20);
+}
+.fz24 {
+    font-size: r(24);
+}
+.fz26 {
+    font-size: r(26);
+}
+.fz28 {
+    font-size: r(28);
+}
+.fz30 {
+    font-size: r(30);
+}
+.fz32 {
+    font-size: r(32);
+}
+.fz34 {
+    font-size: r(34);
+}
+.fz36 {
+    font-size: r(36);
+}
+.fz38 {
+    font-size: r(38);
+}
+.fz40 {
+    font-size: r(40);
+}
+.fz42 {
+    font-size: r(42);
+}
+.fz44 {
+    font-size: r(44);
+}
+.fz50 {
+    font-size: r(50);
+}
+.fz60 {
+    font-size: r(60);
+}
+.fz70 {
+    font-size: r(70);
+}
+.fz80 {
+    font-size: r(80);
+}
+.fz90 {
+    font-size: r(90);
+}
+.fz100 {
+    font-size: r(100);
+}
+.fw-b{
+    font-weight: bold
+}
+.fw-d{
+    font-weight:600;
+}
+.fw-l{
+    font-weight:lighter;
+}
+//-------常见字号 end-------
+
+//-------常见外间距 begin-------
+.m5{
+    margin: r(5);
+}
+.ml5{
+    margin-left: r(5);
+}
+.mt5{
+    margin-top: r(5);
+}
+.mb5{
+    margin-bottom: r(5);
+}
+.mr5{
+    margin-right: r(5);
+}
+.m10{
+    margin: r(10);
+}
+.m20{
+    margin: r(20);
+}
+.m30{
+    margin: r(30);
+}
+.m40{
+    margin: r(40);
+}
+.mt10 {
+    margin-top: r(10);
+}
+.mt20 {
+    margin-top: r(20);
+}
+.mt30 {
+    margin-top: r(30);
+}
+.mt40 {
+    margin-top: r(40);
+}
+.mr10 {
+    margin-right: r(10);
+}
+.mr20 {
+    margin-right: r(20);
+}
+.mr30 {
+    margin-right: r(30);
+}
+.mr40 {
+    margin-right: r(40);
+}
+.mb10 {
+    margin-bottom: r(10);
+}
+.mb20 {
+    margin-bottom: r(20);
+}
+.mb30 {
+    margin-bottom: r(30);
+}
+.mb40 {
+    margin-bottom: r(40);
+}
+.ml10 {
+    margin-left: r(10);
+}
+.ml20 {
+    margin-left: r(20);
+}
+.ml30 {
+    margin-left: r(30);
+}
+.ml40 {
+    margin-left: r(40);
+}
+.mtb10{
+    margin-top: r(10);
+    margin-bottom: r(10);
+}
+.mlr10{
+    margin-left: r(10);
+    margin-right: r(10);
+}
+.mtb20{
+    margin-top: r(20);
+    margin-bottom: r(20);
+}
+.mlr20{
+    margin-left: r(20);
+    margin-right: r(20);
+}
+.mtb30{
+    margin-top: r(30);
+    margin-bottom: r(30);
+}
+.mlr30{
+    margin-left: r(30);
+    margin-right: r(30);
+}
+.mtb5{
+    margin-top: r(5);
+    margin-bottom: r(5);
+}
+.mlr5{
+    margin-left: r(5);
+    margin-right: r(5);
+}
+//-------常见外间距 end-------
+
+//-------常见内间距 begin-------
+
+.p5{
+    padding: r(5);
+}
+.pt5{
+    padding-top: r(5);
+}
+.pb5{
+    padding-bottom: r(5);
+}
+.pl5{
+    padding-left: r(5);
+}
+.pr5{
+    padding-right: r(5);
+}
+.p10{
+    padding: r(10)!important
+}
+.p20{
+    padding: r(20)!important
+}
+.p30{
+    padding: r(30)!important
+}
+.p40{
+    padding: r(40)!important
+}
+.pt0{
+    padding-top: 0!important;
+}
+.pr0{
+    padding-right: 0!important;
+}
+.pb0{
+    padding-bottom: 0!important;
+}
+.pl0{
+    padding-left: 0!important;
+}
+.pt10{
+    padding-top: r(10)!important
+}
+.pt20{
+    padding-top: r(20)!important
+}
+.pt30{
+    padding-top: r(30)!important
+}
+.pt40{
+    padding-top: r(40)!important
+}
+.pr10{
+    padding-right: r(10)!important
+}
+.pr20{
+    padding-right: r(20)!important
+}
+.pr30{
+    padding-right: r(30)!important
+}
+.pr40{
+    padding-right: r(40)!important
+}
+.pb10{
+    padding-bottom: r(10)!important
+}
+.pb20{
+    padding-bottom: r(20)!important
+}
+.pb30{
+    padding-bottom: r(30)!important
+}
+.pb40{
+    padding-bottom: r(40)!important
+}
+.pl10{
+    padding-left: r(10)!important
+}
+.pl20{
+    padding-left: r(20)!important
+}
+.pl30{
+    padding-left: r(30)!important
+}
+.pl40{
+    padding-left: r(40)!important
+}
+.plr10{
+    padding-left: r(10);
+    padding-right: r(10);
+}
+.plr20{
+    padding-left: r(20);
+    padding-right: r(20);
+}
+.plr30{
+    padding-left: r(30);
+    padding-right: r(30);
+}
+.plr40{
+    padding-left: r(40);
+    padding-right: r(40);
+}
+.ptb10{
+    padding-top: r(10);
+    padding-bottom: r(10);
+}
+.ptb20{
+    padding-top: r(20);
+    padding-bottom: r(20);
+}
+.ptb30{
+    padding-top: r(30);
+    padding-bottom: r(30);
+}
+.ptb40{
+    padding-top: r(40);
+    padding-bottom: r(40);
+}
+//-------常见内间距 end-------
+
+//-----文字对齐方式 begin------
+.tx-c {
+    text-align: center;
+}
+
+.tx-l {
+    text-align: left;
+}
+
+.tx-r {
+    text-align: right;
+}
+//-----文字对齐方式 end--------
+
+//-----文字排版 begin--------
+.h1{
+    font-size: r(34);
+    color: $font-color-main;
+}
+.h2{
+    font-size: r(30);
+    color: $font-color-main;
+}
+.h3{
+    font-size: r(28);
+    color: $font-color-main;
+}
+.h4{
+    font-size: r(26);
+    color: $font-color-main;
+}
+.h5{
+    font-size: r(24);
+    color: $font-color-main;
+}
+.h6{
+    font-size: r(32);
+    color: $font-color-main;
+}
+//行距
+.lh1{
+    line-height: 1
+}
+.lh12{
+    line-height: 1.2em
+}
+.lh14{
+    line-height: 1.4em
+}
+.lh16{
+    line-height: 1.6em
+}
+.lh18{
+    line-height: 1.8em
+}
+
+
+//单行省略号
+.p-te {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+//2行省略号
+.p-te2 {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+//3行省略号
+.p-te3 {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+//-----文字排版 end--------
+
+
+//-----常见背景 begin-------
+.bgn{
+    background: none;
+}
+.bgff{
+    background: #fff;
+}
+.bgfb{
+    background: #fbfbfb;
+}
+.bgf5{
+    background: #f5f5f5;
+}
+.bgf0{
+    background: #f0f0f0;
+}
+//-----常见背景 end-------
+//-----常见颜色 begin-------
+.cff{
+    color: #fff
+}
+.c00{
+    color: #000;
+}
+.c33{
+    color: #333;
+}
+.c66{
+    color: #666;
+}
+.c99{
+    color: #999;
+}
+//-----常见颜色 end-------
+/*正圆*/
+.round{
+    border-radius:r(1000);
+    overflow: hidden;
+}
+.round-main{
+    border-radius: $round
+}
+//----常见尺寸 begin-------
+//小
+.size-s{
+    width: r(80);
+    height: r(80);
+    line-height: r(80);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+//中
+.size-m{
+    width: r(120);
+    height: r(120);
+    line-height: r(120);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+//默认
+.size{
+    width: r(160);
+    height: r(160);
+    line-height: r(160);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+//大
+.size-b{
+    width: r(200);
+    height: r(200);
+    line-height: r(200);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+//----常见尺寸 begin-------
+
+
+//图片盒子
+.img-wrap{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    img{
+        width: 100%;
+        height: auto;
+        display: block;
+        z-index: 1;
+    }
+    p{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+        display: block;
+        color: #fff;
+        background: rgba(0,0,0,.5);
+        padding-top: r(10);
+        padding-bottom: r(10)
+    }
+}
+.img-bg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+//强制折行
+.tx-ba{
+    word-break:break-all;
+    word-wrap:break-word;
+}
+//强制一行
+.tx-wsn{
+    white-space:nowrap;
+}
+//英文首字母大写
+.txt-c{
+    text-transform: capitalize
+}
+//英文字母全大写
+.txt-u{
+    text-transform: uppercase
+}
+//英文字母全小写
+.txt-l{
+    text-transform: lowercase
+}
+//英文字母默认
+.txt-n{
+    text-transform: none
+}
